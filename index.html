@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Drive Sync для Obsidian</title>
+<link rel="stylesheet" href="style.css">
+<main>
+  <h1>Google Drive Sync</h1>
+  <p class="lead">Плагин для Obsidian: двусторонняя синхронизация хранилища заметок с вашим Google&nbsp;Drive.</p>
+
+  <h2>Что он делает</h2>
+  <p>Сравнивает заметки на устройстве с копией в Google&nbsp;Drive и приводит обе стороны к одному состоянию: новые файлы заливает, изменённые обновляет, удалённые убирает. Работает на компьютере и на Android.</p>
+
+  <h2>Как устроено</h2>
+  <ul>
+    <li>Сравнение идёт по контрольным суммам содержимого, а не по времени изменения, — расхождение часов между устройствами ни на что не влияет.</li>
+    <li>Плагин помнит состояние последней успешной синхронизации, поэтому отличает «файл удалили здесь» от «файл создали там».</li>
+    <li>Если файл изменён с обеих сторон, сохраняются обе версии — ни одна правка не пропадает молча.</li>
+    <li>Удаления обратимы: локально файл уходит в корзину хранилища, в Google&nbsp;Drive — в корзину Drive.</li>
+  </ul>
+
+  <h2>Доступ к Google Drive</h2>
+  <p>Плагин запрашивает единственное разрешение — <code>drive.file</code>. Оно даёт доступ только к тем файлам, которые создал он сам. Остальное содержимое вашего Google&nbsp;Drive для плагина невидимо.</p>
+
+  <h2>Установка</h2>
+  <p>Файлы сборки — <code>manifest.json</code> и <code>main.js</code> — в <a href="https://github.com/aidarbn/obsidian-gdrive-sync-dist/releases/latest">последнем релизе</a>. Их нужно положить в папку <code>.obsidian/plugins/gdrive-sync/</code> внутри хранилища и включить плагин в настройках Obsidian.</p>
+
+  <footer>
+    <a href="privacy.html">Политика конфиденциальности</a> ·
+    <a href="https://github.com/aidarbn/obsidian-gdrive-sync-dist">Исходники сборки на GitHub</a>
+  </footer>
+</main>
+</html>
